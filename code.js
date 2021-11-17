@@ -118,6 +118,7 @@ function start(){
         clearInterval(timer);
 document.getElementById("startButton").disabled = false;
 document.getElementById("stopButton").disabled = true; 
+    }
     function getData(){
         var loadedData = loadData(); 
         return loadedData;
@@ -136,7 +137,7 @@ document.getElementById("stopButton").disabled = true;
         msg = "<td>" + legend+ ": <td><td>" + value + " " + units + "</td>";
        return msg;
     }
-}
+
 function playStation(){
     console.log("playStation started");
     mySound = new sound("us-lab-background.mp3")
