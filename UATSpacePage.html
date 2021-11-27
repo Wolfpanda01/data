@@ -6,7 +6,7 @@
     <link href= "style.css" rel="stylesheet" type="text/css" />
     <script src="code.js"></script>
     <script src="dataLoader.js"></script>
-         <!--creating needed var-->
+         
        <script> var win = 0;
         var lose = 0;
         var tie = 0;
@@ -18,9 +18,44 @@
         var timer;
         var data = getData();
         function updateDisplay(){
-            theTime = new Date();    //finsh code
-            document.getElementById("timeClock").innerHTML = "the time is" //finsh againg
+            theTime = new Date();    
+            console.log
+            var timeRead = data[index].time_seconds;
+
+            if (timeRead >= 10){}
+         
+                document.getElementById("data").row["seconds"].innerHTML = dataRow("Time Elapsed", data[index].time_seconds,"seconds");
+                document.getElementById("data").row["Latitude"].innerHTML = dataRow("Latitude", data[index].Latitude,"Latitude");
+                document.getElementById("data").row["GPS Altitude"].innerHTML = dataRow("GPS Altitude", data[index].Longitude,"Longitude");
+                document.getElementById("data").row["BMP Sensor Altitude"].innerHTML = dataRow("BMP Sensor Altitude", data[index].GPS_Altitude," ");
+                document.getElementById("data").row["BMP Sensor Pressure"].innerHTML = dataRow("BMP Sensor Pressure", data[index].BMP_Sensor_Altitude," ");
+                document.getElementById("data").row["seconds"].innerHTML = dataRow("Time Elapsed", data[index].BMP_Sensor_Pressure," ");
+                document.getElementById("data").row["BMP Sensor Temperature"].innerHTML = dataRow("Time Elapsed", data[index].BMP_Sensor_Temperature," ");
+                document.getElementById("data").row["Digital Sensor Temperature"].innerHTML = dataRow("Digital Sensor Temperature", data[index].Digital_Sensor_Temperature," ");
+                document.getElementById("data").row["CSS Sensor Temperature"].innerHTML = dataRow("CSS Sensor Temperature", data[index].CSS_Sensor_Temperature," ");
+                document.getElementById("data").row["CSS Sensor eCO2"].innerHTML = dataRow("CSS Sensor eCO2", data[index].CSS_Sensor_eCO2," ");
+                document.getElementById("data").row["CSS Sensor TVOC"].innerHTML = dataRow("CSS Sensor TVOC", data[index].CSS_Sensor_TVOC," ");
+                document.getElementById("data").row["UV"].innerHTML = dataRow("UV", data[index].UV," ");
+                document.getElementById("data").row["Accel X"].innerHTML = dataRow("Accel X", data[index].Accel_X," ");
+                document.getElementById("data").row["Accel Y"].innerHTML = dataRow("Accel Y", data[index]. Accel_Y," ");
+                document.getElementById("data").row["Accel Z"].innerHTML = dataRow("Accel Z", data[index].Accel_Z," ");
+                document.getElementById("data").row["Magnetic X"].innerHTML = dataRow("Magnetic X", data[index].Magnetic_X," ");
+                document.getElementById("data").row["Magnetic Y"].innerHTML = dataRow("Magnetic Y", data[index].Magnetic_Y," ");
+                document.getElementById("data").row["Magnetic Z"].innerHTML = dataRow("Magnetic Z", data[index].Magnetic_Z," ");
+                document.getElementById("data").row["Gyro X"].innerHTML = dataRow("Gyro X", data[index]. Gyro_X," ");
+                document.getElementById("data").row["Gyro Y"].innerHTML = dataRow("Gyro Y", data[index].Gyro_Y," ");
+                document.getElementById("data").row["Gyro Z"].innerHTML = dataRow("Gyro Z", data[index].Gyro_Z," ");
+                document.getElementById("timeClock").innerHTML = "the time is" + theTime.getHours() + ":"
+            +(TheTime.getMinutesID() < 10 ? "0" + theTime.getMinutes() : theTime.getMinutes());
+            +(theTime.getSeconds() < 10 ? "0" + theTime.getSeconds() : theTime.getSeconds()); 
         }
+        if(index < 500){
+            index++
+           }else{
+                index = 0;
+            
+        }
+        
       </script>
 
     <title> UAT Space Program </title>
